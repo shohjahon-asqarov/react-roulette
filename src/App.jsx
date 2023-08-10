@@ -2,7 +2,7 @@ import Roulette from "./components/Roulette";
 
 export default function App() {
   return (
-    <div>
+    <div className="container">
       <Roulette />
     </div>
   );
