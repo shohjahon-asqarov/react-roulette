@@ -1,9 +1,9 @@
-import Roulette from "./components/Roulette";
+import DraggableForm from "./components/Draggeable";
 
 export default function App() {
   return (
     <div className="container">
-      <Roulette />
+      <DraggableForm />
     </div>
   );
 }

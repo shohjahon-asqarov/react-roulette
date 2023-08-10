@@ -4,7 +4,7 @@ import { BiTrash, BiGridVertical, BiPlus } from "react-icons/bi";
 import { v4 as uuidv4 } from "uuid";
 import Roulette from "./Roulette";
 
-const FormularioTexto = () => {
+const DraggableForm = () => {
     const [inputList, setInputList] = useState([
         {
             id: uuidv4(),
@@ -51,7 +51,7 @@ const FormularioTexto = () => {
             text: "Зажигалки Есть?"
         }
     ]);
-    
+
     // handle input change
     const handleInputChange = (e, index) => {
         const { name, value } = e.target;
@@ -89,6 +89,7 @@ const FormularioTexto = () => {
             </div>
             {/*  */}
             <Roulette data={inputList} />
+
             <DragDropContext onDragEnd={handleOnDragEnd}>
                 <Droppable droppableId="items">
                     {(provided) => (
@@ -138,6 +139,7 @@ const FormularioTexto = () => {
                     )}
                 </Droppable>
             </DragDropContext>
+
             <button
                 onClick={handleAddClick}
                 style={{ marginLeft: "2.1rem" }}
@@ -149,4 +151,4 @@ const FormularioTexto = () => {
     );
 };
 
-export default FormularioTexto;
+export default DraggableForm;
